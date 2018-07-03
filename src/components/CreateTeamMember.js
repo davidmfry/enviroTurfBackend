@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import TeamMember from './TeamMember/TeamMember';
+import {database} from "../firebase";
 
 class CreateTeamMember extends Component
 {
@@ -18,6 +19,56 @@ class CreateTeamMember extends Component
             linkedInUrl: "",
 
         }
+    }
+
+    handleSubmit(e)
+    {
+        e.preventDefault()
+
+        if (this.state.firstName === '' || this.state.lastName === '')
+        {
+            alert("Please add a first and last name");
+            return 0
+        }
+
+        if (this.state.phoneNumber === '')
+        {
+            alert("Please add a Phone");
+            return 0
+        }
+
+        if (this.state.bio === '')
+        {
+            alert("Please add a bio");
+            return 0
+        }
+
+        if (this.state.profileImage === '')
+        {
+            alert("Please add a profile image url");
+            return 0
+        }
+
+        let teamMemberItem = {
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            phoneNumber: this.state.phoneNumber,
+            bio: this.state.bio,
+            profileImage: this.state.profileImage,
+            linkedInUrl: this.state.linkedInUrl,
+
+        }
+
+        database.ref("teammembers").push(teamMemberItem);
+
+        this.setState({
+            firstName: "",
+            lastName: "",
+            phoneNumber: "",
+            bio: "",
+            profileImage: "",
+            linkedInUrl: "",
+        })
     }
 
     render() {
