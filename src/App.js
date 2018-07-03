@@ -8,6 +8,10 @@ import StateDetail from './components/StateDetail';
 import Dashboard from './components/Dashboard';
 import SchoolDetail from './components/SchoolDetail';
 import NavBar from './components/NavBar';
+import Sandbox from './components/Sandbox';
+import EditHomepage from './components/EditHomePage';
+import CreateTeamMember from './components/CreateTeamMember'
+
 class App extends Component
 {
 
@@ -19,8 +23,11 @@ class App extends Component
           <Switch>
               <Route path="/state/:stateName" component={StateDetail} exact={true}/>
               <Route path="/state/:stateName/:schoolName" component={SchoolDetail} exact={true}/>
-              <Route path="/createstate" component={CreateStateForm} exact={true}/>
+              <Route path="/edit/homepage" component={EditHomepage} exact={true}/>
 
+              <Route path="/createteammember" component={CreateTeamMember} exact={true}/>
+              <Route path="/createstate" component={CreateStateForm} exact={true}/>
+              <Route path="/sandbox" component={Sandbox} exact={true}/>
               <Route path="/" component={Dashboard} exact={true}/>
 
           </Switch>

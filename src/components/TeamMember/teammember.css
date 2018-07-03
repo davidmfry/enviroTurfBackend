@@ -1,0 +1,46 @@
+.team-member-image {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /*background-image: url("/static/img/${props.image}");*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.team-member-container{
+    background-color: black;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+
+}
+
+.team-member-group {
+    padding-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px
+
+}
+
+.team-member-linkedin {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    /*background-image: url("/static/social/linkedin-icon.png");*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-left: -40px;
+}
+
+
+@media screen and (min-width:0) and (min-resolution: .001dpcm) {
+    .team-member-container {
+        background-color: #20242C;
+        color: #ECECEC;
+    }
+}
