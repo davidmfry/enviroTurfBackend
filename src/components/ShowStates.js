@@ -26,12 +26,12 @@ class ShowStates extends Component
     {
         return _.map(this.state.states, (usState, key) => {
             return (
-                <div key={key}>
+                <li key={key} className="list-group-item">
                     <Link to={{
                         pathname: `/state/${key}`,
                         state: {schools: usState.schools}
-                    }}><h4>{key}</h4></Link>
-                </div>
+                    }}>{key}</Link>
+                </li>
             )
         })
     }
@@ -39,8 +39,11 @@ class ShowStates extends Component
     render() {
         return (
             <div>
-                <h2>States</h2>
-                {this.renderState()}
+                <h1>Edit States</h1>
+                <ul className="list-group">
+                    {this.renderState()}
+                </ul>
+
             </div>
         );
     }

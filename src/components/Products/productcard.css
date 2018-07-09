@@ -1,0 +1,24 @@
+.product-card-container {
+    background: #20242C;
+    color: #ECECEC;
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 10px;
+}
+
+.product-card-container p {
+    margin: 0;
+    padding: 10px;
+}
+
+@media screen and (min-width:0) and (min-resolution: .001dpcm)
+{
+    .product-card-container {
+        background: #20242C;
+        color: #ECECEC;
+    }
+
+    .product-image {
+        padding-top: 20px;
+    }
+}

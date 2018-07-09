@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 import { database } from "../../firebase";
+import ListItem from '../ListItem';
 import TeamMemberItem from'./TeamMemberItem';
 
 class TeamMembers extends Component
@@ -29,10 +30,13 @@ class TeamMembers extends Component
     {
         return _.map(this.state.teamMembers, (teamMember, key) => {
             return (
-                <TeamMemberItem
+                <ListItem
                     key={key}
                     name={`${teamMember.firstName} ${teamMember.lastName}`}
-                    onEditPress={() => this.handleOnEditPress(key)} />
+                    hasEditButton = {true}
+                    onEditPress={() => this.handleOnEditPress(key)}
+                    onDeletePress={() => this.handleOnDeletePress(key)}
+                />
             )
         })
     }
@@ -40,6 +44,11 @@ class TeamMembers extends Component
     handleOnEditPress(id)
     {
         this.props.history.push(`/edit/teammember/${id}`)
+    }
+
+    handleOnDeletePress(id)
+    {
+        database.ref('teammembers').child(id).remove();
     }
 
     render() {
