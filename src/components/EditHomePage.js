@@ -221,7 +221,7 @@ class EditHomePage extends Component
 
                 {this.renderWhatWeProvideItems()}
                 <br/>
-                <h3>Contact Form Email Recipient</h3>
+                <h3>"Contact Us" Form Email Recipient</h3>
                 <div className="form-group">
                     <input
                         type="text"

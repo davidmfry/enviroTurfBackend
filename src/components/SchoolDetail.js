@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import {database} from "../firebase";
 import _ from 'lodash';
 import ImageCard from '../card/ImageCard';
@@ -16,7 +17,7 @@ class SchoolDetail extends Component
 {
     constructor (props)
     {
-        super(props)
+        super(props);
         this.state = {
             imageUrlInput: '',
             imageUrlsArray:[]
@@ -86,6 +87,8 @@ class SchoolDetail extends Component
                     <h1 className="display-4">{schoolNameSplit[0].slice(0, -1)}</h1>
                     <p className="lead">{schoolNameSplit[1].slice(1)}</p>
                     <button type="button" onClick={() => this.handleAddButtonPress(this.state.imageUrlInput)} className="btn btn-primary btn-lg">Add New Images</button>
+
+                    <p style={{color: 'red'}}>WARNING: Image pixel ratio must be 1200x800</p>
                     <input
                         type="text"
                         name='imageURLs'
@@ -99,7 +102,7 @@ class SchoolDetail extends Component
                 <div style={photoContainer}>
                     {this.renderSchoolImages()}
                 </div>
-
+                <Link to={`/state/${this.props.match.params.stateName}`}>Back to Schools</Link>
             </div>
         );
     }
