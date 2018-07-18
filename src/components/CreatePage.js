@@ -20,6 +20,9 @@ class CreatePage extends Component {
                     <li className="list-group-item">
                         <Link to="/createnewsitem">Create News Item</Link>
                     </li>
+                    <li className="list-group-item">
+                        <Link to="/createbaseballschool">Create New Baseball Softball Field</Link>
+                    </li>
                 </ul>
             </div>
         );

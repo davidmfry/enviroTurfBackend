@@ -29,6 +29,9 @@ class EditPage extends Component {
                     <li className="list-group-item">
                         <Link to="/newsitems">News Items</Link>
                     </li>
+                    <li className="list-group-item">
+                        <Link to="/edit/baseballsoftball">Baseball Softball Fields</Link>
+                    </li>
 
                 </ul>
                 <br/>
