@@ -45,6 +45,10 @@ class NavBar extends Component
                             <Link className="nav-link" to="/createpage">Create</Link>
                         </li>
 
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/tutorials">Video Tutorials</Link>
+                        </li>
+
                         <li className="nav-item float-right" onClick={() => this.logout()}>
                             <Link className="nav-link" to="/">
                                 Sign Out

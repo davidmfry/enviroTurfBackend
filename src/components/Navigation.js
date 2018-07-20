@@ -27,6 +27,8 @@ import CreateBaseballSchool from "./CreateBaseballSchool"
 import Login from "./Login";
 import ShowBaseballSoftballSchool from './ShowBaseballSoftballSchool';
 import EditBaseballSoftball from './EditBaseballSoftball';
+import Tutorials from './Tutorials';
+import EditNewsItem from './EditNewsItem'
 
 
 class Navigation extends Component
@@ -62,9 +64,11 @@ const NavigationAuth = () =>
                 <Route path="/edit/homepage" component={EditHomepage} exact={true}/>
                 <Route path="/edit/missionstatement" component={EditMissionStatment} exact={true}/>
                 <Route path="/edit/product/:id" component={EditProducts} exact={true}/>
+                <Route path="/edit/newsitem/:id" component={EditNewsItem} exact={true}/>
                 <Route path="/edit/teammember/:id" component={EditTeamMember} exact={true}/>
                 <Route path="/edit/baseballsoftball" component={ShowBaseballSoftballSchool} exact={true}/>
                 <Route path="/edit/baseballsoftball/:id" component={EditBaseballSoftball} exact={true}/>
+                <Route path="/tutorials" component={Tutorials} exact={true}/>
                 <Route path="/newsitems" component={NewsItems} exact={true}/>
                 <Route path="/products" component={Products} exact={true}/>
                 <Route path="/teammembers" component={TeamMembers} exact={true}/>
@@ -72,7 +76,6 @@ const NavigationAuth = () =>
                 <Route path="/createProduct" component={CreateProduct} exact={true}/>
                 <Route path="/createteammember" component={CreateTeamMember} exact={true}/>
                 <Route path="/createbaseballschool" component={CreateBaseballSchool} exact={true}/>
-
                 <Route path="/createstate" component={CreateStateForm} exact={true}/>
                 <Route path="/sandbox" component={Sandbox} exact={true}/>
                 <Route path="/editpage" component={EditPage} exact={true}/>

@@ -31,7 +31,7 @@ class NewsItems extends Component {
                     key={key}
                     name={`${newsItem.headline}`}
                     info={` || ${newsItem.description}`}
-                    hasEditButton = {false}
+                    hasEditButton = {true}
                     onEditPress={() => this.handleOnEditPress(key)}
                     onDeletePress={() => this.handleOnDeletePress(key)}
                 />

@@ -11,9 +11,7 @@ class CreatePage extends Component {
                     <li className="list-group-item">
                         <Link to="/createteammember">Create Team Member</Link>
                     </li>
-                    <li className="list-group-item">
-                        <Link to="/createstate">Created New School</Link>
-                    </li>
+
                     <li className="list-group-item">
                         <Link to="/createProduct">Create Product</Link>
                     </li>
@@ -21,7 +19,10 @@ class CreatePage extends Component {
                         <Link to="/createnewsitem">Create News Item</Link>
                     </li>
                     <li className="list-group-item">
-                        <Link to="/createbaseballschool">Create New Baseball Softball Field</Link>
+                        <Link to="/createstate">Create New Football/Soccer Field</Link>
+                    </li>
+                    <li className="list-group-item">
+                        <Link to="/createbaseballschool">Create New Baseball/Softball Field</Link>
                     </li>
                 </ul>
             </div>

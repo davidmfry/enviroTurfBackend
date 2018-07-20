@@ -39,7 +39,7 @@ class ShowStates extends Component
     render() {
         return (
             <div>
-                <h1>Edit States</h1>
+                <h1>Edit Football/Soccer Fields</h1>
                 <ul className="list-group">
                     {this.renderState()}
                 </ul>

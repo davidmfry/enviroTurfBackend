@@ -19,18 +19,18 @@ class EditPage extends Component {
                     </li>
 
                     <li className="list-group-item">
-                        <Link to="/teammembers">Team Members</Link>
+                        <Link to="/teammembers">Edit Team Members</Link>
                     </li>
 
                     <li className="list-group-item">
-                        <Link to="/products">Products</Link>
+                        <Link to="/products">Edit Products</Link>
                     </li>
 
                     <li className="list-group-item">
-                        <Link to="/newsitems">News Items</Link>
+                        <Link to="/newsitems">Edit News Items</Link>
                     </li>
                     <li className="list-group-item">
-                        <Link to="/edit/baseballsoftball">Baseball Softball Fields</Link>
+                        <Link to="/edit/baseballsoftball">Edit Baseball/Softball Fields</Link>
                     </li>
 
                 </ul>
