@@ -187,7 +187,7 @@ class EditHomePage extends Component
 
 
         database.ref("homepageitems").child(homePageItemId).update(homePageItem);
-        this.props.history.push('/')
+        this.props.history.push('/dashboard')
     }
 
 

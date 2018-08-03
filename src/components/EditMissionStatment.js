@@ -44,7 +44,7 @@ class EditMissionStatment extends Component
 
         database.ref("missionstatement").child(fireBaseStatementId).update(statementItem);
 
-        this.props.history.push('/');
+        this.props.history.push('/dashboard');
         // database.ref("missionstatement").push(statementItem);
     }
 
