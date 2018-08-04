@@ -44,16 +44,17 @@ class CreateNewsItem extends Component
             return 0
         }
 
+        const date = Date.now();
 
-        const {headline, description, headerImage, content} = this.state
+        const {headline, description, headerImage, content} = this.state;
         let newsItem = {
             headline,
             description,
             content,
             headerImage,
+            date
 
         };
-        console.log(newsItem)
 
         database.ref("newsitems").push(newsItem);
 

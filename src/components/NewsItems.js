@@ -25,7 +25,11 @@ class NewsItems extends Component {
 
     renderTeamMembers()
     {
-        return _.map(this.state.newsItems, (newsItem, key) => {
+        // changes the object into an array to the news items can show the newwest item first.
+        let newsItemsArray = _.values(this.state.newsItems)
+        newsItemsArray.reverse();
+
+        return _.map(newsItemsArray, (newsItem, key) => {
             return (
                 <ListItem
                     key={key}
