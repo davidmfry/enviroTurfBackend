@@ -3,3 +3,4 @@ This backend was created using react and firebase. The backend is used to update
 
 ## How To Install
 Clone and do an npm install and npm start to run the local version.
+You will also need to add your own firebase info to the firebase.js
